@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer';
 
-import Custom404 from './404';
+import Custom404 from './Custom404';
 
 describe('#Custom404 Page', () => {
   it('should renders correctly', () => {

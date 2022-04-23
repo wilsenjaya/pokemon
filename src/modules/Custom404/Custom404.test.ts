@@ -1,4 +1,4 @@
-import { handleClick } from './404';
+import { handleClick } from './Custom404';
 
 describe('#handleClick', () => {
   it('should call router push with correct params', () => {

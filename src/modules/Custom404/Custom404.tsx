@@ -2,13 +2,7 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter, NextRouter } from 'next/router';
 import { BsArrowLeft } from 'react-icons/bs';
-import {
-  Flex,
-  Box,
-  Text,
-  Heading,
-  Button,
-} from '@chakra-ui/react';
+import { Flex, Box, Text, Heading, Button } from '@chakra-ui/react';
 
 import pokeBall from '../../../public/assets/pokeball.png';
 
