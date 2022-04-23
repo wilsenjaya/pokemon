@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#Custom404 Page should renders correctly 1`] = `
+<div
+  className="css-1o0ed15"
+>
+  <div
+    className="css-1336sx9"
+  >
+    <div
+      className="css-1g360fb"
+    >
+      <div
+        className="css-70qvj9"
+      >
+        <h2
+          className="chakra-heading css-yn02dh"
+        >
+          4
+        </h2>
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "height": "initial",
+              "margin": 0,
+              "maxWidth": "100%",
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "relative",
+              "width": "initial",
+            }
+          }
+        >
+          <span
+            style={
+              Object {
+                "background": "none",
+                "border": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": "initial",
+                "margin": 0,
+                "maxWidth": "100%",
+                "opacity": 1,
+                "padding": 0,
+                "width": "initial",
+              }
+            }
+          >
+            <img
+              alt=""
+              aria-hidden={true}
+              src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27130%27%20height=%27130%27/%3e"
+              style={
+                Object {
+                  "background": "none",
+                  "border": 0,
+                  "display": "block",
+                  "height": "initial",
+                  "margin": 0,
+                  "maxWidth": "100%",
+                  "opacity": 1,
+                  "padding": 0,
+                  "width": "initial",
+                }
+              }
+            />
+          </span>
+          <img
+            alt="0"
+            data-nimg="intrinsic"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": undefined,
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="0"
+              data-nimg="intrinsic"
+              decoding="async"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=384&q=75"
+              srcSet="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=384&q=75 2x"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": undefined,
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+        <h2
+          className="chakra-heading css-yn02dh"
+        >
+          4
+        </h2>
+      </div>
+      <div
+        className="css-u6v8er"
+      >
+        <h2
+          className="chakra-heading css-2ryi4e"
+        >
+          Page Not Found
+        </h2>
+        <p
+          className="chakra-text css-159gddx"
+        >
+          You look lost on your journey!
+        </p>
+        <button
+          className="chakra-button css-1h8u2ox"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="chakra-button__icon css-1wh2kri"
+          >
+            <svg
+              aria-hidden={true}
+              fill="currentColor"
+              focusable={false}
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                fillRule="evenodd"
+              />
+            </svg>
+          </span>
+          Go Back Home
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
