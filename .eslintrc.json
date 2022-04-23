@@ -34,6 +34,7 @@
     ],
     "react/react-in-jsx-scope": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "no-restricted-exports": "off"
+    "no-restricted-exports": "off",
+    "linebreak-style": 0
   }
 }
