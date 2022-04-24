@@ -13,6 +13,7 @@ import {
   FormErrorMessage,
   FormLabel,
   FormControl,
+  useToast,
 } from '@chakra-ui/react';
 
 import PokemonContext from '../../../context/PokemonContext';
@@ -32,6 +33,7 @@ const ModalSuccessCatch = ({
   isOpen, onClose, pokemonId, onSubmit,
 }: Props) => {
   const { isNickNameExists } = useContext(PokemonContext)!;
+  const toast = useToast();
   const {
     handleSubmit, register, formState: { errors }, setError, reset,
   } = useForm();
@@ -42,6 +44,13 @@ const ModalSuccessCatch = ({
     } else {
       onSubmit(data.nickName);
       onClose();
+      toast({
+        title: 'Success',
+        description: `"${data.nickName}" is saved`,
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
 

@@ -1,31 +1,25 @@
+/* eslint-disable react/no-array-index-key */
 import type { NextPage } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useContext, useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { Stack, Skeleton, SkeletonCircle } from '@chakra-ui/react';
+import { SimpleGrid, Box, Text } from '@chakra-ui/react';
 import get from 'lodash/get';
 
 import PokemonContext from '../../context/PokemonContext';
 import PokemonListQuery from '../../graphql/PokemonList.graphql';
 import constants from '../../constants';
+import PokemonCard from '../../components/PokemonCard';
+import PokemonCardLoading from '../../components/PokemonCardLoading';
 
 const { POKEMON_LIST_FETCH_LIMIT: LIMIT } = constants;
 
 type Pokemon = {
   id: number;
-  url: string;
   name: string;
   artwork: string;
 };
 
-const renderLoading = () => (
-  <Stack>
-    <SkeletonCircle size="10" />
-    <Skeleton height="20px" />
-    <Skeleton height="20px" />
-  </Stack>
-);
+const totalShimmering = new Array(8).fill(0);
 
 const PokemonList: NextPage = () => {
   const { getTotalPokemonOwned } = useContext(PokemonContext)!;
@@ -84,31 +78,24 @@ const PokemonList: NextPage = () => {
     }
   }, [shouoldFetch]);
 
-  if (loading || !data) return renderLoading();
-  if (error) return <p>{error.message}</p>;
+  if (error) return <Text>{error.message}</Text>;
 
   return (
-    <>
-      {pokemonList.map((pokemon: Pokemon) => (
-        <div key={pokemon.id}>
-          <Link href={`/pokemon/${pokemon.id}`}>
-            <a>
-              <h3>{pokemon.name}</h3>
-              <p>
-                Number Owned:
-                {getTotalPokemonOwned(pokemon.id)}
-              </p>
-              <Image
-                src={pokemon.artwork}
-                alt={`${pokemon.name}_image`}
-                width={150}
-                height={150}
-              />
-            </a>
-          </Link>
-        </div>
-      ))}
-    </>
+    <Box p={[5, 5, 10]}>
+      <SimpleGrid columns={[1, 1, 2, 4]} spacing={5}>
+        {loading || !data
+          ? totalShimmering.map((arr, index) => <PokemonCardLoading key={index} />)
+          : pokemonList.map((pokemon: Pokemon) => (
+            <PokemonCard
+              key={pokemon.id}
+              id={`${pokemon.id}`}
+              name={pokemon.name}
+              image={pokemon.artwork}
+              totalOwned={getTotalPokemonOwned(pokemon.id)}
+            />
+          ))}
+      </SimpleGrid>
+    </Box>
   );
 };
 

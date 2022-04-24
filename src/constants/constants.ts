@@ -1,3 +1,4 @@
 export default {
   POKEMON_LIST_FETCH_LIMIT: 20,
+  POKEMON_STORAGE_KEY: 'MY_POKEMON',
 };

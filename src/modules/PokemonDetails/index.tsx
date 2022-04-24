@@ -3,10 +3,21 @@ import { useContext } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useQuery } from '@apollo/client';
-import { Button, useDisclosure } from '@chakra-ui/react';
+import {
+  SimpleGrid,
+  Box,
+  Heading,
+  Text,
+  Stack,
+  Badge,
+  Button,
+  useToast,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 import ModalSuccessCatch from './components/ModalSuccessCatch';
-import ModalFailedCatch from './components/ModalFailedCatch';
+import PokemonCardLoading from '../../components/PokemonCardLoading';
+import PokemonDetailData from './components/PokemonDetailData';
 import PokemonDetailQuery from '../../graphql/PokemonDetail.graphql';
 import PokemonContext from '../../context/PokemonContext';
 
@@ -42,20 +53,35 @@ type Props = {
   id: string;
 };
 
+const renderLoading = () => (
+  <SimpleGrid columns={[1, 1, 2]} spacing={5}>
+    <PokemonCardLoading />
+    <PokemonCardLoading withoutCircle />
+  </SimpleGrid>
+);
+
 const PokemonList: NextPage<Props> = ({ id }: Props) => {
-  const modalSuccess = useDisclosure();
-  const modalFailed = useDisclosure();
+  const { onOpen, onClose, isOpen } = useDisclosure();
+  const toast = useToast();
   const { addPokemon } = useContext(PokemonContext)!;
   const { data, error, loading } = useQuery(PokemonDetailQuery, { variables: { name: id } });
 
-  if (loading) return <p>loading...</p>;
-  if (error) return <p>{error.message}</p>;
+  if (loading) return renderLoading();
+  if (error) return <Text>{error.message}</Text>;
 
   const { pokemon }: Pokemon = data;
 
   const onCatch = () => {
-    if (Math.random() > 0.5) modalSuccess.onOpen();
-    else modalFailed.onOpen();
+    if (Math.random() > 0.5) onOpen();
+    else {
+      toast({
+        title: 'Failed To Catch!',
+        description: 'Uh Oh! You have failed to catch the pokemon',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
   };
 
   const onSubmitData = (nickName: string) => {
@@ -70,41 +96,55 @@ const PokemonList: NextPage<Props> = ({ id }: Props) => {
   };
 
   return (
-    <>
-      <Button
-        colorScheme="red"
-        margin={3}
-        onClick={onCatch}
-      >
-        Catch Pokemon
-      </Button>
-      <h1>{pokemon.id}</h1>
-      <h1>{pokemon.name}</h1>
-      <Image src={pokemon.sprites.back_default} width={130} height={130} />
-      <Image src={pokemon.sprites.front_default} width={130} height={130} />
-      {pokemon.types?.map((item, index) => (
-        <div key={index}>
-          <h3>{item.type.name}</h3>
-        </div>
-      ))}
-      {pokemon.abilities?.map((item, index) => (
-        <div key={index}>
-          <h3>{item.ability.name}</h3>
-        </div>
-      ))}
-      {pokemon.moves?.map((item, index) => (
-        <div key={index}>
-          <h3>{item.move.name}</h3>
-        </div>
-      ))}
+    <Box py={3} px={5}>
+      <SimpleGrid columns={[1, 1, 2]} spacing={5}>
+        <Box
+          p={4}
+          boxShadow="xl"
+          textAlign="center"
+          borderWidth="1px"
+          borderRadius="2xl"
+          height="fit-content"
+        >
+          <Text fontWeight={600} color="gray.500" mb={4}>
+            {`# ${pokemon.id}`}
+          </Text>
+          <Image src={pokemon.sprites.front_default} width={150} height={150} />
+          <Heading fontSize="2xl" fontFamily="body">
+            {pokemon.name}
+          </Heading>
+
+          <Stack align="center" justify="center" direction="row" mt={3}>
+            {pokemon.types?.map((item, index) => (
+              <Badge
+                key={index}
+                px={2}
+                py={1}
+                fontWeight="400"
+              >
+                {item.type.name}
+              </Badge>
+            ))}
+          </Stack>
+
+          <Button
+            colorScheme="red"
+            margin={3}
+            onClick={onCatch}
+            mt={6}
+          >
+            Catch Pokemon
+          </Button>
+        </Box>
+        <PokemonDetailData abilities={pokemon.abilities} moves={pokemon.moves} />
+      </SimpleGrid>
       <ModalSuccessCatch
-        isOpen={modalSuccess.isOpen}
-        onClose={modalSuccess.onClose}
+        isOpen={isOpen}
+        onClose={onClose}
         pokemonId={pokemon.id.toString()}
         onSubmit={onSubmitData}
       />
-      <ModalFailedCatch isOpen={modalFailed.isOpen} onClose={modalFailed.onClose} />
-    </>
+    </Box>
   );
 };
 

@@ -22,7 +22,6 @@ const PokemonDetailQuery = gql`
       }
       sprites {
         front_default
-        back_default
       }
     }
   }

@@ -7,20 +7,23 @@ import { ApolloProvider } from '@apollo/client';
 import '../styles/globals.css';
 import client from '../apollo-client';
 import { PokemonContextProvider } from '../context/PokemonContext';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>My Pokemon</title>
-        <meta name="description" content="Pokemon data you can trust!" />
+        <title>Pokemon Master</title>
+        <meta name="description" content="Become a Pokemon Master!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ApolloProvider client={client}>
         <ChakraProvider>
-          <PokemonContextProvider>
-            <Component {...pageProps} />
-          </PokemonContextProvider>
+          <Layout>
+            <PokemonContextProvider>
+              <Component {...pageProps} />
+            </PokemonContextProvider>
+          </Layout>
         </ChakraProvider>
       </ApolloProvider>
     </>

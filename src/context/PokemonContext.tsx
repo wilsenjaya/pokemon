@@ -14,8 +14,10 @@ import {
   PokemonContextType,
   LayoutProps,
 } from './PokemonContext.d';
+import constants from '../constants';
 
-const KEY = 'MY_POKEMON';
+const { POKEMON_STORAGE_KEY: KEY } = constants;
+
 const PokemonContext = createContext<PokemonContextType | null>(null);
 
 const addPokemon = (
