@@ -2,7 +2,13 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import { useRouter, NextRouter } from 'next/router';
 import { BsArrowLeft } from 'react-icons/bs';
-import { Flex, Box, Text, Heading, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  Heading,
+  Button,
+  Center,
+} from '@chakra-ui/react';
 
 import pokeBall from '../../../public/assets/pokeball.png';
 
@@ -18,7 +24,7 @@ const Custom404: NextPage = () => {
   const router = useRouter();
 
   return (
-    <Flex justify="center" alignItems="center" sx={{ minHeight: '100vh' }}>
+    <Center minH="100vh">
       <Box
         maxW="xl"
         borderWidth="1px"
@@ -55,7 +61,7 @@ const Custom404: NextPage = () => {
           </Box>
         </Box>
       </Box>
-    </Flex>
+    </Center>
   );
 };
 

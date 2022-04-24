@@ -5,7 +5,6 @@ const PokemonListQuery = gql`
     pokemons(limit: $limit, offset: $offset) {
       count
       nextOffset
-      prevOffset
       results {
         id
         url

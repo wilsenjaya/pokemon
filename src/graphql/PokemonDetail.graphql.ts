@@ -5,7 +5,6 @@ const PokemonDetailQuery = gql`
     pokemon(name: $name) {
       id
       name
-      base_experience
       abilities {
         ability {
           name
@@ -20,6 +19,10 @@ const PokemonDetailQuery = gql`
         type {
           name
         }
+      }
+      sprites {
+        front_default
+        back_default
       }
     }
   }
