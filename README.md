@@ -26,3 +26,10 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Authors and acknowledgment
+
+- **Wilsen**
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
