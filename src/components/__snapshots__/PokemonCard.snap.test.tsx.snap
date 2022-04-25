@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#PokemonCard Component should renders correctly with default props 1`] = `
+<div
+  className="css-utde3r"
+>
+  <span
+    style={
+      Object {
+        "background": "none",
+        "border": 0,
+        "boxSizing": "border-box",
+        "display": "inline-block",
+        "height": "initial",
+        "margin": 0,
+        "maxWidth": "100%",
+        "opacity": 1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "relative",
+        "width": "initial",
+      }
+    }
+  >
+    <span
+      style={
+        Object {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "padding": 0,
+          "width": "initial",
+        }
+      }
+    >
+      <img
+        alt=""
+        aria-hidden={true}
+        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27150%27%20height=%27150%27/%3e"
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      />
+    </span>
+    <img
+      alt="bulbasaur_image"
+      data-nimg="intrinsic"
+      decoding="async"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style={
+        Object {
+          "border": "none",
+          "bottom": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": 0,
+          "left": 0,
+          "margin": "auto",
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "minHeight": "100%",
+          "minWidth": "100%",
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "padding": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        }
+      }
+    />
+    <noscript>
+      <img
+        alt="bulbasaur_image"
+        data-nimg="intrinsic"
+        decoding="async"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=384&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=384&q=75 2x"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </noscript>
+  </span>
+  <h2
+    className="chakra-heading css-178fexg"
+  >
+    bulbasaur
+  </h2>
+  <p
+    className="chakra-text css-qi3vhq"
+  >
+    # 1
+  </p>
+  <div
+    className="chakra-stack css-gfbv0r"
+  >
+    <button
+      className="chakra-button css-1ystkvu"
+      onClick={[Function]}
+      type="button"
+    >
+      Check Detail
+    </button>
+  </div>
+</div>
+`;
+
+exports[`#PokemonCard Component should renders correctly with optional props 1`] = `
+<div
+  className="css-utde3r"
+>
+  <span
+    style={
+      Object {
+        "background": "none",
+        "border": 0,
+        "boxSizing": "border-box",
+        "display": "inline-block",
+        "height": "initial",
+        "margin": 0,
+        "maxWidth": "100%",
+        "opacity": 1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "relative",
+        "width": "initial",
+      }
+    }
+  >
+    <span
+      style={
+        Object {
+          "background": "none",
+          "border": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": "initial",
+          "margin": 0,
+          "maxWidth": "100%",
+          "opacity": 1,
+          "padding": 0,
+          "width": "initial",
+        }
+      }
+    >
+      <img
+        alt=""
+        aria-hidden={true}
+        src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27150%27%20height=%27150%27/%3e"
+        style={
+          Object {
+            "background": "none",
+            "border": 0,
+            "display": "block",
+            "height": "initial",
+            "margin": 0,
+            "maxWidth": "100%",
+            "opacity": 1,
+            "padding": 0,
+            "width": "initial",
+          }
+        }
+      />
+    </span>
+    <img
+      alt="bulbasaur_image"
+      data-nimg="intrinsic"
+      decoding="async"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      style={
+        Object {
+          "border": "none",
+          "bottom": 0,
+          "boxSizing": "border-box",
+          "display": "block",
+          "height": 0,
+          "left": 0,
+          "margin": "auto",
+          "maxHeight": "100%",
+          "maxWidth": "100%",
+          "minHeight": "100%",
+          "minWidth": "100%",
+          "objectFit": undefined,
+          "objectPosition": undefined,
+          "padding": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        }
+      }
+    />
+    <noscript>
+      <img
+        alt="bulbasaur_image"
+        data-nimg="intrinsic"
+        decoding="async"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=384&q=75"
+        srcSet="/_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fpicsum.photos%2F200%2F&w=384&q=75 2x"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "width": 0,
+          }
+        }
+      />
+    </noscript>
+  </span>
+  <h2
+    className="chakra-heading css-178fexg"
+  >
+    bulbasaur
+  </h2>
+  <p
+    className="chakra-text css-qi3vhq"
+  >
+    # 1
+  </p>
+  <h2
+    className="chakra-heading css-178fexg"
+  >
+    bulba
+  </h2>
+  <div
+    className="chakra-stack css-gfbv0r"
+  >
+    <button
+      className="chakra-button css-1ystkvu"
+      onClick={[Function]}
+      type="button"
+    >
+      Check Detail
+    </button>
+    <button
+      className="chakra-button css-1ystkvu"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Release
+    </button>
+  </div>
+  <span
+    className="chakra-badge css-wo20ao"
+  >
+    Total Owned: 1
+  </span>
+</div>
+`;

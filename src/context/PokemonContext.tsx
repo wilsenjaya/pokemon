@@ -20,10 +20,10 @@ const { POKEMON_STORAGE_KEY: KEY } = constants;
 
 const PokemonContext = createContext<PokemonContextType | null>(null);
 
-const addPokemon = (
+export const addPokemon = (
   myPokemon: MyPokemonState,
   setMyPokemon: SetMyPokemonState,
-) => (id: string, data: PokemonDataType) => {
+) => (id: string, data: PokemonDataType): void => {
   const newPokemon = cloneDeep(myPokemon);
   if (myPokemon[id]) newPokemon[id].push(data);
   else newPokemon[id] = [data];
@@ -32,27 +32,27 @@ const addPokemon = (
   localStorage.setItem(KEY, JSON.stringify(newPokemon));
 };
 
-const releasePokemon = (
+export const releasePokemon = (
   myPokemon: MyPokemonState,
   setMyPokemon: SetMyPokemonState,
-) => (id: string, nickName: string) => {
+) => (id: string, nickName: string): void => {
   const newPokemon = cloneDeep(myPokemon);
   if (myPokemon[id]) {
-    const idx = newPokemon[id].findIndex((item) => item.nickName === nickName);
+    const index = newPokemon[id].findIndex((item) => item.nickName === nickName);
     if (newPokemon[id].length <= 1) delete newPokemon[id];
-    else newPokemon[id].splice(idx, 1);
+    else newPokemon[id].splice(index, 1);
   }
   setMyPokemon(newPokemon);
   localStorage.setItem(KEY, JSON.stringify(newPokemon));
 };
 
-const isNickNameExists = (
+export const isNickNameExists = (
   myPokemon: MyPokemonState,
-) => (id: string, nickName: string) => myPokemon[id]?.some((x) => x.nickName === nickName);
+) => (id: string, nickName: string): boolean => myPokemon[id]?.some((x) => x.nickName === nickName);
 
-const getTotalPokemonOwned = (
+export const getTotalPokemonOwned = (
   myPokemon: MyPokemonState,
-) => (id: string) => {
+) => (id: string): number => {
   if (myPokemon[id]) return Object.values(myPokemon[id]).length;
   return 0;
 };

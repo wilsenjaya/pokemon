@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#PokemonCardLoading Component should renders correctly with default props 1`] = `
+<div
+  className="css-x1qbfg"
+>
+  <div
+    className="chakra-skeleton css-16jkguf"
+  />
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+</div>
+`;
+
+exports[`#PokemonCardLoading Component should renders correctly with withoutCircle props 1`] = `
+<div
+  className="css-x1qbfg"
+>
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+  <div
+    className="chakra-skeleton css-fw49k7"
+  />
+</div>
+`;

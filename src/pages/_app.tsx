@@ -5,7 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { ApolloProvider } from '@apollo/client';
 
 import '../styles/globals.css';
-import client from '../apollo-client';
+import client from '../graphql/apollo-client';
 import { PokemonContextProvider } from '../context/PokemonContext';
 import Layout from '../components/Layout';
 

@@ -48,7 +48,7 @@ const ModalSuccessCatch = ({
         title: 'Success',
         description: `"${data.nickName}" is saved`,
         status: 'success',
-        duration: 3000,
+        duration: 2000,
         isClosable: true,
       });
     }

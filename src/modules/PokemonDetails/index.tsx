@@ -78,7 +78,7 @@ const PokemonList: NextPage<Props> = ({ id }: Props) => {
         title: 'Failed To Catch!',
         description: 'Uh Oh! You have failed to catch the pokemon',
         status: 'error',
-        duration: 3000,
+        duration: 2000,
         isClosable: true,
       });
     }
@@ -106,10 +106,10 @@ const PokemonList: NextPage<Props> = ({ id }: Props) => {
           borderRadius="2xl"
           height="fit-content"
         >
-          <Text fontWeight={600} color="gray.500" mb={4}>
+          <Text fontWeight={600} color="gray.500">
             {`# ${pokemon.id}`}
           </Text>
-          <Image src={pokemon.sprites.front_default} width={150} height={150} />
+          <Image src={pokemon.sprites.front_default} width={250} height={250} />
           <Heading fontSize="2xl" fontFamily="body">
             {pokemon.name}
           </Heading>
